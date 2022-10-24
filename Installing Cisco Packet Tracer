@@ -5,11 +5,10 @@ sudo rm -rf packettracerDownload Cisco Packet Tracer for Ubuntu_64bit.deb from h
 *enter the folder where you downloaded the program. 
 cd Downloads
 
-```diff
-*Create a new folder.```
+*Create a new folder.
 mkdir packettracer
 
-*Extract the .deb (Debian file) package 
+*Extract the .deb (Debian file) package.
 ar -x CiscoPacketTracer_820_Ubuntu_64bit.deb --output=packettracer
 
 ar -x $path_to_pt --output=packettracer
