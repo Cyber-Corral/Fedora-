@@ -1,0 +1,37 @@
+
+
+sudo rm -rf packettracerDownload Cisco Packet Tracer for Ubuntu_64bit.deb from https://www.netacad.com/portal/resources/packet-tracer
+
+*enter the folder where you downloaded the program. 
+cd Downloads
+
+*Create a new folder. 
+mkdir packettracer
+
+*Extract the .deb (Debian file) package 
+ar -x CiscoPacketTracer_820_Ubuntu_64bit.deb --output=packettracer
+
+ar -x $path_to_pt --output=packettracer
+tar -xvf packettracer/control.tar.xz --directory=packettracer
+tar -xvf packettracer/data.tar.xz --directory=packettracer
+
+sudo cp -r packettracer/usr /
+sudo cp -r packettracer/opt /
+sudo sed -i 's/packettracer/packettracer --no-sandbox args/' /usr/share/applications/cisco-pt.desktop
+sudo ./packettracer/postinst
+
+* Install dependencies 
+
+  sudo dnf install -y \
+  
+  qt5-qtmultimedia.x86_64 \
+  qt5-qtwebengine.x86_64 \
+  qt5-qtnetworkauth.x86_64 \
+  qt5-qtwebsockets.x86_64 \
+  qt5-qtwebchannel.x86_64 \
+  qt5-qtscript.x86_64 \
+  qt5-qtlocation.x86_64 \
+  qt5-qtsvg.x86_64 \
+  qt5-qtspeech
+  
+  sudo rm -rf packettracer
