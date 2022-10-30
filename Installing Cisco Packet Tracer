@@ -1,7 +1,9 @@
+There's no Cisco Packet Tracer for Fefora Linux, so you have to download the Debian version for Ubuntu. 
+Here is my Frankenstein list of commands to make it work ;) 
 
+Download Cisco Packet Tracer for Ubuntu_64bit.deb from https://www.netacad.com/portal/resources/packet-tracer
 
-sudo rm -rf packettracerDownload Cisco Packet Tracer for Ubuntu_64bit.deb from https://www.netacad.com/portal/resources/packet-tracer
-
+sudo rm -rf packettracer 
 *enter the folder where you downloaded the program. 
 cd Downloads
 
